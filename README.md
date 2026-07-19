@@ -1,67 +1,107 @@
 # Automation Exercise API Testing
+
 ## Overview
 
-This project demonstrates comprehensive REST API testing for the **Automation Exercise** application using **Postman** and **Newman**. It validates API functionality, request methods, response status codes, response payloads, and error handling through positive and negative test scenarios.
+This project showcases end-to-end REST API testing for the **Automation Exercise** application using **Postman** and **Newman**. It covers functional validation, request and response verification, error handling, and automation of API test execution through comprehensive positive and negative test scenarios.
 
 ---
 
-## Project Objectives
+## Project Scope
+
+The project covers testing of the following API modules:
+
+- Products
+- Brands
+- Product Search
+- User Authentication
+- User Registration
+- User Account Management
+- User Profile Retrieval
+
+---
+
+## Objectives
 
 - Validate REST API functionality.
-- Verify HTTP methods (GET, POST, PUT, DELETE).
-- Validate response status codes and response body.
-- Verify API behavior under valid and invalid scenarios.
+- Verify supported and unsupported HTTP methods.
+- Validate request parameters and response payloads.
+- Verify HTTP status codes and error messages.
 - Perform positive and negative API testing.
+- Validate response headers and response time.
 - Automate API execution using Newman.
 
 ---
 
-## Technologies Used
+## Technologies & Tools
 
-- Postman
-- Newman
-- REST API
-- JSON
-- HTTP Methods
-- API Testing
-
----
-
-## APIs Covered
-
-| API | Endpoint | Method | Expected Response |
-|------|----------|--------|------------------|
-| API 1 | `/productsList` | GET | Retrieve all products (200) |
-| API 2 | `/productsList` | POST | Method Not Allowed (405) |
-| API 3 | `/brandsList` | GET | Retrieve all brands (200) |
-| API 4 | `/brandsList` | PUT | Method Not Allowed (405) |
-| API 5 | `/searchProduct` | POST | Search products successfully (200) |
-| API 6 | `/searchProduct` | POST | Missing parameter validation (400) |
-| API 7 | `/verifyLogin` | POST | Verify login with valid credentials (200) |
-| API 8 | `/verifyLogin` | POST | Missing email validation (400) |
-| API 9 | `/verifyLogin` | DELETE | Method Not Allowed (405) |
-| API 10 | `/verifyLogin` | POST | Invalid credentials validation (404) |
-| API 11 | `/createAccount` | POST | Create user account (201) |
-| API 12 | `/deleteAccount` | DELETE | Delete user account (200) |
-| API 13 | `/updateAccount` | PUT | Update user account (200) |
-| API 14 | `/getUserDetailByEmail` | GET | Retrieve user details (200) |
+| Category | Technology |
+|----------|------------|
+| API Client | Postman |
+| API Runner | Newman |
+| API Type | REST API |
+| Data Format | JSON |
+| Protocol | HTTP |
+| Testing | Functional API Testing |
+| Reporting | Newman Report |
 
 ---
 
-## Test Coverage
+## API Test Coverage
 
-- ✅ Functional Testing
+| Module | Scenarios |
+|---------|-----------|
+| Products | Get All Products, Invalid POST Request |
+| Brands | Get All Brands, Invalid PUT Request |
+| Search | Product Search, Missing Parameter Validation |
+| Authentication | Valid Login, Invalid Login, Missing Email, Invalid HTTP Method |
+| User Account | Create Account, Update Account, Delete Account, Get User Details |
+
+---
+
+## Validation Performed
+
+- ✅ Functional Validation
 - ✅ Positive Testing
 - ✅ Negative Testing
-- ✅ Status Code Validation
+- ✅ HTTP Method Validation
+- ✅ Request Parameter Validation
 - ✅ Response Body Validation
 - ✅ Response Header Validation
+- ✅ Status Code Validation
 - ✅ Response Time Validation
-- ✅ HTTP Method Validation
-- ✅ Missing Parameter Validation
-- ✅ Invalid Credentials Validation
-- ✅ User Account CRUD Operations
+- ✅ Error Message Validation
+- ✅ CRUD Operations Validation
 
 ---
 
 ## Repository Structure
+
+```text
+automation-exercise-api-testing/
+│
+├── Collections/
+├── Environment/
+├── Reports/
+├── Screenshots/
+├── Test Cases/
+└── README.md
+```
+
+---
+
+## Execution
+
+Run the collection using Newman:
+
+```bash
+newman run AutomationExercise.postman_collection.json \
+-e AutomationExercise.postman_environment.json
+```
+
+---
+
+## Author
+
+**Muhammed Raafat**
+
+Software Testing Engineer
