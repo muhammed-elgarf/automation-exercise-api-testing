@@ -1,9 +1,4 @@
-<p align="center">
-  <img src="https://automationexercise.com/static/images/home/slider/1.jpg" alt="Automation Exercise Banner" width="100%">
-</p>
-
 # Automation Exercise API Testing
-
 ## Overview
 
 This project demonstrates comprehensive REST API testing for the **Automation Exercise** application using **Postman** and **Newman**. It validates API functionality, request methods, response status codes, response payloads, and error handling through positive and negative test scenarios.
