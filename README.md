@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/automation-exercise.png" alt="Automation Exercise API Testing" width="100%">
+  <img src="https://automationexercise.com/static/images/home/logo.png" alt="Automation Exercise Logo">
 </p>
 
 # Automation Exercise API Testing
